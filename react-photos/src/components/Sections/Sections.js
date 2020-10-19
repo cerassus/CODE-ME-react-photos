@@ -1,21 +1,43 @@
 import React from 'react';
-import {} from '../../constans'
+import listFactory from '../../utils/listFactory';
 
-class Sections extends React.Component {
-    render() {
-        return <div>Im Sections</div>
-            
+import ListElement from '../ListElement';
+
+import './Sections.css';
+
+/*
+class Sections extends Component {
+  state = {
+  }
+  componentDidMount() {
+    if (!this.state.list) {
+      this.props.toggleShowLoader()
+      fetchSections(
+        data => {
+          this.setState({
+            list: data
+          });
+
+          this.props.setSectionsList(data);
+          this.props.toggleShowLoader()
+        }
+      );
     }
+  }
+
+  render() {
+    return (
+      <div className="sections">
+        {listFactory(this.state.list, ListElement)}
+      </div>
+    );
+  }
 }
+*/
 
-
+const Sections = ({ data }) => (
+    <div className="sections">
+      {listFactory(data, ListElement)}
+    </div>
+  );
 export default Sections;
-
-
-
-
-// import React { Component } from 'react';
-
-// class Sections extends Component {
-    
-// }
